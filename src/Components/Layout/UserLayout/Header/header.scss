@@ -1,0 +1,26 @@
+.search-result {
+  width: 100%;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: min((100vh - 96px) - 60px, 734px);
+    min-height: 100px;
+    padding-top: 8px;
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+  }
+}
+
+.input-search {
+  margin-top: 25px;
+  width: 94%;
+  height: 25px;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  flex: 1;
+}
