@@ -63,21 +63,21 @@ function Header() {
     items,
   };
 
-  useEffect(() => {
-    const cartA = JSON.parse(localStorage.getItem("cart"));
-    cartA.map((item) => {
-      dispatch(
-        addToCartRequest({
-          id: item.id,
-          image: item.image,
-          name: item.name,
-          price: item.price,
-          size: item.size,
-          quantity: item.quantity,
-        })
-      );
-    });
-  }, []);
+  // useEffect(() => {
+  //   const cartA = JSON.parse(localStorage.getItem("cart"));
+  //   cartA.map((item) => {
+  //     dispatch(
+  //       addToCartRequest({
+  //         id: item.id,
+  //         image: item.image,
+  //         name: item.name,
+  //         price: item.price,
+  //         size: item.size,
+  //         quantity: item.quantity,
+  //       })
+  //     );
+  //   });
+  // }, []);
 
   //menu
   const listMenu = [
