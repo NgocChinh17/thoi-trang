@@ -37,12 +37,7 @@
       "categoryId": 1,
       "discountId": 1,
       "typeId": 1,
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "sizes": ["S", "M", "L", "XL"],
       "colors": "Màu Đen",
       "code": "57E3047",
       "hex": "#000000",
@@ -57,12 +52,7 @@
       "categoryId": 1,
       "discountId": 2,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Kẻ Xanh cổ vịt",
       "code": "17E3287",
       "hex": "#000044",
@@ -77,12 +67,7 @@
       "categoryId": 1,
       "discountId": 2,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Xanh lá đậm",
       "code": "71E3309",
       "hex": "#003300",
@@ -97,12 +82,7 @@
       "categoryId": 1,
       "discountId": 1,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Xanh cổ vịt đậm",
       "code": "71E3298",
       "hex": "#000099",
@@ -117,12 +97,7 @@
       "categoryId": 1,
       "discountId": 3,
       "typeId": 3,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Kẻ Be",
       "code": "67E2253",
       "hex": "#CC9966",
@@ -137,12 +112,7 @@
       "categoryId": 1,
       "discountId": 2,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Be vàng",
       "code": "58E3304",
       "hex": "#C7B750",
@@ -157,12 +127,7 @@
       "categoryId": 1,
       "discountId": 1,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Đỏ mận",
       "code": "58E3304",
       "hex": "#A61919",
@@ -177,12 +142,7 @@
       "categoryId": 1,
       "discountId": 3,
       "typeId": 3,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Be vàng",
       "code": "67E2253",
       "hex": "#9DAB38",
@@ -197,12 +157,7 @@
       "categoryId": 2,
       "discountId": 2,
       "typeId": 6,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Kẻ Khói đậm",
       "code": "41B9509",
       "hex": "#AFB396",
@@ -217,12 +172,7 @@
       "categoryId": 2,
       "discountId": 1,
       "typeId": 6,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Kẻ Đỏ hồng",
       "code": "48B9555",
       "hex": "#D973C8",
@@ -237,12 +187,7 @@
       "categoryId": 2,
       "discountId": 3,
       "typeId": 6,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Ghi",
       "code": "48B9636",
       "hex": "#808080",
@@ -257,12 +202,7 @@
       "categoryId": 2,
       "discountId": 2,
       "typeId": 6,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Tím thẫm",
       "code": "48M8190",
       "hex": "#BE8DCC",
@@ -277,12 +217,7 @@
       "categoryId": 2,
       "discountId": 1,
       "typeId": 6,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Be sáng",
       "code": "48M8632",
       "hex": "#E3DF71",
@@ -297,12 +232,7 @@
       "categoryId": 2,
       "discountId": 3,
       "typeId": 6,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Họa tiết Hồng nhạt",
       "code": "48M8643",
       "hex": "#E89090",
@@ -317,12 +247,7 @@
       "categoryId": 2,
       "discountId": 2,
       "typeId": 6,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Họa tiết Hồng kẹo",
       "code": "48M8643",
       "hex": "#FAA0A0",
@@ -337,12 +262,7 @@
       "categoryId": 2,
       "discountId": 1,
       "typeId": 6,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Họa tiết Trắng ngà",
       "code": "48M8648",
       "hex": "#F2EBEB",
@@ -357,12 +277,7 @@
       "categoryId": 3,
       "discountId": 2,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Xanh lơ",
       "code": "57K1549",
       "hex": "#67E4F5",
@@ -377,12 +292,7 @@
       "categoryId": 3,
       "discountId": 1,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Xanh Táo",
       "code": "57K1548",
       "hex": "#36E05E",
@@ -397,12 +307,7 @@
       "categoryId": 3,
       "discountId": 3,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Đen",
       "code": "57K1541",
       "hex": "#141010",
@@ -417,12 +322,7 @@
       "categoryId": 3,
       "discountId": 2,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Trắng",
       "code": "56K1547",
       "hex": "#F5F5F5",
@@ -437,12 +337,7 @@
       "categoryId": 3,
       "discountId": 1,
       "typeId": 2,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Hồng kẹo",
       "code": "20G1109",
       "hex": "#D95D97",
@@ -457,12 +352,7 @@
       "categoryId": 3,
       "discountId": 3,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Hồng nhạt",
       "code": "79G0841",
       "hex": "#FCC0DC",
@@ -477,12 +367,7 @@
       "categoryId": 3,
       "discountId": 2,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Hồng tím",
       "code": "70G0773",
       "hex": "#C36CD9",
@@ -497,12 +382,7 @@
       "categoryId": 3,
       "discountId": 1,
       "typeId": 1,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "colors": "Vàng mustard",
       "code": "70G0773",
       "hex": "#94A103",

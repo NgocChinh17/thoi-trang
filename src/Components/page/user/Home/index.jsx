@@ -63,9 +63,7 @@ function HomePage() {
 
   //Thả Tym
   const isFavorite = useMemo(() => {
-    return productList.data.favorites?.some(
-      (item) => item.userId === userInfo.data.id
-    );
+    return productList.data.favorites?.some((item) => item.userId === userInfo.data.id);
   }, [productList.data, userInfo.data.id]);
 
   const handleToggleFavorite = () => {
@@ -103,8 +101,7 @@ function HomePage() {
 
   //scroll
   const handleScroll = (direction) => {
-    const newStart =
-      direction === "right" ? visibleRange.start + 1 : visibleRange.start - 1;
+    const newStart = direction === "right" ? visibleRange.start + 1 : visibleRange.start - 1;
     const newEnd = newStart + 4;
 
     if (newStart >= 0 && newEnd <= productList.data.length) {
@@ -129,25 +126,16 @@ function HomePage() {
   };
 
   const renderProductItems = useMemo(() => {
-    const visibleProducts = productList.data.slice(
-      visibleRange.start,
-      visibleRange.end
-    );
+    const visibleProducts = productList.data.slice(visibleRange.start, visibleRange.end);
     return (
       <div style={{ position: "relative" }}>
         <Row style={{ flexWrap: "nowrap", padding: "16px 0" }}>
           {visibleProducts.map((item, index) => (
             <Col lg={6} md={8} sm={12} key={index}>
-              <Link
-                to={generatePath(ROUTES.USER.PRODUCT_DETAIL, { id: item.id })}
-              >
+              <Link to={generatePath(ROUTES.USER.PRODUCT_DETAIL, { id: item.id })}>
                 <Row>
                   <S.ProductListContainer>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      style={{ borderRadius: 5 }}
-                    />
+                    <img src={item.image} alt={item.name} style={{ borderRadius: 5 }} />
                   </S.ProductListContainer>
                 </Row>
               </Link>
@@ -178,9 +166,7 @@ function HomePage() {
                           isFavorite ? (
                             <HeartFilled style={{ fontSize: 17 }} />
                           ) : (
-                            <HeartOutlined
-                              style={{ fontSize: 17, color: "#414141" }}
-                            />
+                            <HeartOutlined style={{ fontSize: 17, color: "#414141" }} />
                           )
                         }
                         onClick={() => handleToggleFavorite()}
@@ -362,33 +348,35 @@ function HomePage() {
       </S.buttonTitle2>
       <br /> <br />
       <S.buttonTitle>
-        <button
-          style={{
-            border: "1px solid #8e8686",
-            height: 60,
-            width: 250,
-            borderTopLeftRadius: 50,
-            borderBottomRightRadius: 30,
-            marginLeft: "40%",
-            marginBottom: 16,
-          }}
-        >
-          <button
+        <div style={{ textAlign: "center" }}>
+          <div
             style={{
-              fontWeight: 600,
-              marginBottom: 16,
-              border: "1px solid #333",
-              backgroundColor: "white",
-              height: 70,
-              width: 230,
-              fontSize: 20,
+              border: "1px solid #8e8686",
+              height: 60,
+              width: 250,
               borderTopLeftRadius: 50,
-              borderBottomRightRadius: 50,
+              borderBottomRightRadius: 30,
+              marginLeft: "40%",
+              marginBottom: 16,
             }}
           >
-            Trưng Bày
-          </button>
-        </button>
+            <button
+              style={{
+                fontWeight: 600,
+                marginBottom: 16,
+                border: "1px solid #333",
+                backgroundColor: "white",
+                height: 70,
+                width: 230,
+                fontSize: 20,
+                borderTopLeftRadius: 50,
+                borderBottomRightRadius: 50,
+              }}
+            >
+              Trưng bày
+            </button>
+          </div>
+        </div>
       </S.buttonTitle>
       <br />
       <S.galleryList>

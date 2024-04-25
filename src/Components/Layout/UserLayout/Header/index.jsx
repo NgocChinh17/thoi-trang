@@ -48,11 +48,6 @@ function Header() {
       onClick: () => navigate(ROUTES.USER.PROFILE),
     },
     {
-      label: "Lịch Sử Đơn Hàng",
-      key: "2",
-      onClick: () => navigate(ROUTES.USER.ORDER_HISTORY),
-    },
-    {
       label: "Đăng Xuất",
       key: "3",
       onClick: () => dispatch(logoutRequest()),
@@ -63,21 +58,21 @@ function Header() {
     items,
   };
 
-  // useEffect(() => {
-  //   const cartA = JSON.parse(localStorage.getItem("cart"));
-  //   cartA.map((item) => {
-  //     dispatch(
-  //       addToCartRequest({
-  //         id: item.id,
-  //         image: item.image,
-  //         name: item.name,
-  //         price: item.price,
-  //         size: item.size,
-  //         quantity: item.quantity,
-  //       })
-  //     );
-  //   });
-  // }, []);
+  useEffect(() => {
+    const cartA = JSON.parse(localStorage.getItem("cart"));
+    cartA?.map((item) => {
+      dispatch(
+        addToCartRequest({
+          id: item.id,
+          image: item.image,
+          name: item.name,
+          price: item.price,
+          size: item.size,
+          quantity: item.quantity,
+        })
+      );
+    });
+  }, []);
 
   //menu
   const listMenu = [
@@ -115,7 +110,7 @@ function Header() {
               style={{ width: "50px", height: "50px", marginRight: "10px" }}
             />
             <p>{item.name}</p>
-            <p>Price: ${item.price}</p>
+            <p>{item.price.toLocaleString()} VNĐ </p>
           </Space>
         </div>
       ))}

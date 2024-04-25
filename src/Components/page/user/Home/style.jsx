@@ -1,9 +1,9 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const HomeWrapper = styled.div`
   margin-left: 125px;
   margin-right: 120px;
-`
+`;
 
 export const ProductListContainer = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ export const ProductListContainer = styled.div`
       transform: scale(1.1);
     }
   }
-`
+`;
 export const ProductImage = styled.div`
   @media (max-width: 1280px) {
     img {
@@ -40,7 +40,7 @@ export const ProductImage = styled.div`
       left: 0;
     }
   }
-`
+`;
 
 export const TitleProduct = styled.div`
   @media (max-width: 1280px) {
@@ -48,40 +48,40 @@ export const TitleProduct = styled.div`
     margin-top: -183px;
     font-size: 10px;
   }
-`
+`;
 
 export const SlideBanners = styled.div`
   @media (max-width: 1028px) {
     margin-left: 30px;
   }
-`
+`;
 
 export const visibleRangeScroll = styled.div`
   @media (max-width: 1028px) {
     display: none;
   }
-`
+`;
 
 export const iconCarts = styled.div`
   @media (max-width: 1028px) {
     display: none;
   }
-`
+`;
 export const buttonTitle = styled.div`
   @media (max-width: 1028px) {
     margin-right: 100px;
   }
-`
+`;
 export const buttonTitle2 = styled.div`
   @media (max-width: 1028px) {
     text-align: center;
     justify-content: center;
   }
-`
+`;
 
 export const galleryList = styled.div`
   @media (max-width: 1028px) {
     /* margin-right: 20px; */
     margin-left: 10px;
   }
-`
+`;
