@@ -14,7 +14,6 @@ import {
   Table,
   Breadcrumb,
   message,
-  notification,
 } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
 
@@ -31,12 +30,13 @@ import * as S from "./style";
 
 function CheckoutPage() {
   const [checkoutForm] = Form.useForm();
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const { cartList } = useSelector((state) => state.cart);
-  const { cityList, districtList, wardList } = useSelector((state) => state.location);
   const { userInfo } = useSelector((state) => state.auth);
+  const { cityList, districtList, wardList } = useSelector((state) => state.location);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const totalPrice = useMemo(
     () => cartList.reduce((total, item) => total + item.price * item.quantity, 0),
@@ -94,13 +94,9 @@ function CheckoutPage() {
           cartList: cartList,
         },
         callback: () => {
-          // Show success message using Ant Design's message component
           message.success("Đặt hàng thành công! Cảm ơn bạn đã mua sắm.");
-
-          // Optional: You can reset the form and cartList if needed
           checkoutForm.resetFields();
-
-          navigate(ROUTES.USER.HOME); // You need to implement a clearCart action
+          navigate(ROUTES.USER.HOME);
         },
       })
     );

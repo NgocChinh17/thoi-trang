@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from "react";
 import { Link, generatePath } from "react-router-dom";
-import { Card, Row, Col, Spin, Space, notification, message } from "antd";
+import { Card, Row, Col, Spin, Space, notification } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { DeleteOutlined } from "@ant-design/icons";
 

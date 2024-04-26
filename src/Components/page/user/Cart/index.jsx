@@ -1,20 +1,8 @@
 import { useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate, Link } from "react-router-dom";
-import {
-  InputNumber,
-  Table,
-  Image,
-  Button,
-  Popconfirm,
-  notification,
-  Row,
-  Col,
-  Card,
-  Breadcrumb,
-  Space,
-} from "antd";
-import { DeleteOutlined, HomeOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
+import { InputNumber, Table, Image, Button, Popconfirm, notification, Row, Col, Card } from "antd";
+import { DeleteOutlined } from "@ant-design/icons";
 
 import * as S from "./style";
 
@@ -22,9 +10,10 @@ import { ROUTES } from "../../../../constants/routes";
 import { removeFromCart, updateFormCart } from "../../../../redux/slicers/cart.slice";
 
 function CartPage() {
+  const { cartList } = useSelector((state) => state.cart);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { cartList } = useSelector((state) => state.cart);
 
   //tong tien
   const totalPrice = useMemo(
@@ -59,10 +48,9 @@ function CartPage() {
       render: (image, record) => <Image src={record.image} alt={record.name} width={50} />,
     },
     {
-      title: "Giá Sản Phẩm",
-      dataIndex: "price",
-      key: "price",
-      render: (price) => price.toLocaleString(),
+      title: "Tên",
+      dataIndex: "name",
+      key: "name",
     },
     {
       title: "Số Lượng",
@@ -75,6 +63,12 @@ function CartPage() {
           onChange={(value) => handleChangeQuantity(record.productId, value)}
         />
       ),
+    },
+    {
+      title: "Giá Sản Phẩm",
+      dataIndex: "price",
+      key: "price",
+      render: (price) => price.toLocaleString(),
     },
     {
       title: "Thành Tiền",
@@ -111,42 +105,6 @@ function CartPage() {
 
   return (
     <S.cartPageWrapper>
-      <Breadcrumb
-        items={[
-          {
-            title: (
-              <Link to={ROUTES.USER.HOME}>
-                <Space>
-                  <HomeOutlined />
-                  <span>Home</span>
-                </Space>
-              </Link>
-            ),
-          },
-          {
-            title: (
-              <Link to={ROUTES.USER.PRODUCT_LIST}>
-                <Space>
-                  <span>Trang Sản Phẩm</span>
-                </Space>
-              </Link>
-            ),
-          },
-          {
-            title: (
-              <Link to={ROUTES.USER.PRODUCT_DETAIL}>
-                <Space>
-                  <span>Trang Sản Phẩm chi tiết</span>
-                </Space>
-              </Link>
-            ),
-          },
-          {
-            title: "Giỏ Hàng",
-          },
-        ]}
-      />
-      <br />
       <Table columns={columns} dataSource={renderCartList} pagination={false} />
       <Row justify="end" style={{ margin: "24px 0" }}>
         <Col span={4} style={{ textAlign: "right" }}>
