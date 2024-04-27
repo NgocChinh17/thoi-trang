@@ -30,12 +30,6 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use(
-  jsonServer.rewriter({
-    "/*": "/&1",
-  })
-);
-
 server.use(auth);
 server.use(router);
 server.listen(4000);
