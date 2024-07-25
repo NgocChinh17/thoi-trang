@@ -66,7 +66,7 @@ function ProductDetailPage() {
     return reviewList.data.length ? totalRate / reviewList.data.length : 0;
   }, [reviewList.data]);
 
-  //review sản phẩm
+  //hien thi review sản phẩm
   const renderReviewList = useMemo(() => {
     return reviewList.data.map((item) => {
       return (
@@ -133,7 +133,7 @@ function ProductDetailPage() {
     return <S.ReviewFormWrapper>Bạn chưa đăng nhập</S.ReviewFormWrapper>;
   }, [reviewList.data, userInfo.data]);
 
-  //bảng đánh giá
+  // đánh giá
   const handleReviewProduct = (values) => {
     dispatch(
       reviewProductRequest({

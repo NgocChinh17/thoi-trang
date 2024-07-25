@@ -59,7 +59,7 @@ function Header() {
   };
 
   useEffect(() => {
-    const cartA = JSON.parse(localStorage.getItem("cart"));
+    const cartA = JSON.parse(localStorage.getItem("cartList"));
     cartA?.map((item) => {
       dispatch(
         addToCartRequest({

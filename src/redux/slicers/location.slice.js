@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cityList: {
@@ -16,7 +16,7 @@ const initialState = {
     loading: false,
     error: null,
   },
-}
+};
 
 export const locationSlice = createSlice({
   name: "location",
@@ -24,51 +24,53 @@ export const locationSlice = createSlice({
   reducers: {
     // getCityList
     getCityListRequest: (state, action) => {
-      state.cityList.loading = true
-      state.cityList.error = null
+      state.cityList.loading = true;
+      state.cityList.error = null;
     },
     getCityListSuccess: (state, action) => {
-      const { data } = action.payload
-      state.cityList.loading = false
-      state.cityList.data = data
+      const { data } = action.payload;
+      state.cityList.loading = false;
+      state.cityList.data = data;
     },
     getCityListFailure: (state, action) => {
-      const { error } = action.payload
-      state.cityList.loading = false
-      state.cityList.error = error
+      const { error } = action.payload;
+      state.cityList.loading = false;
+      state.cityList.error = error;
     },
+
     // getDistrictList
     getDistrictListRequest: (state, action) => {
-      state.districtList.loading = true
-      state.districtList.error = null
+      state.districtList.loading = true;
+      state.districtList.error = null;
     },
     getDistrictListSuccess: (state, action) => {
-      const { data } = action.payload
-      state.districtList.loading = false
-      state.districtList.data = data
+      const { data } = action.payload;
+      state.districtList.loading = false;
+      state.districtList.data = data;
     },
     getDistrictListFailure: (state, action) => {
-      const { error } = action.payload
-      state.districtList.loading = false
-      state.districtList.error = error
+      const { error } = action.payload;
+      state.districtList.loading = false;
+      state.districtList.error = error;
     },
+
     // getWardList
     getWardListRequest: (state, action) => {
-      state.wardList.loading = true
-      state.wardList.error = null
+      state.wardList.loading = true;
+      state.wardList.error = null;
     },
     getWardListSuccess: (state, action) => {
-      const { data } = action.payload
-      state.wardList.loading = false
-      state.wardList.data = data
+      const { data } = action.payload;
+      state.wardList.loading = false;
+      state.wardList.data = data;
     },
     getWardListFailure: (state, action) => {
-      const { error } = action.payload
-      state.wardList.loading = false
-      state.wardList.error = error
+      const { error } = action.payload;
+      state.wardList.loading = false;
+      state.wardList.error = error;
     },
   },
-})
+});
 
 export const {
   getCityListRequest,
@@ -80,6 +82,6 @@ export const {
   getWardListRequest,
   getWardListSuccess,
   getWardListFailure,
-} = locationSlice.actions
+} = locationSlice.actions;
 
-export default locationSlice.reducer
+export default locationSlice.reducer;

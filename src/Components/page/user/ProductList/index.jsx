@@ -77,6 +77,7 @@ function ProductListPage() {
     navigate(`${ROUTES.USER.PRODUCT_LIST}?${qs.stringify(newFilterParams)}`);
   };
 
+  //show more
   const handleShowPage = () => {
     dispatch(
       getProductListRequest({
@@ -87,36 +88,6 @@ function ProductListPage() {
       })
     );
   };
-
-  const renderCategoryItems = useMemo(() => {
-    return categoryList.data.map((item, index) => {
-      return (
-        <Checkbox key={item.id} value={item.id}>
-          {item.name}
-        </Checkbox>
-      );
-    });
-  }, [categoryList.data]);
-
-  const renderDiscountItems = useMemo(() => {
-    return discountList.data.map((item, index) => {
-      return (
-        <Checkbox key={item.id} value={item.id}>
-          {item.name}
-        </Checkbox>
-      );
-    });
-  }, [discountList.data]);
-
-  const renderTypeItems = useMemo(() => {
-    return typeList.data.map((item, index) => {
-      return (
-        <Checkbox key={item.id} value={item.id}>
-          {item.name}
-        </Checkbox>
-      );
-    });
-  }, [typeList.data]);
 
   //Thả Tym
   const isFavorite = useMemo(() => {
@@ -249,6 +220,37 @@ function ProductListPage() {
       );
     });
   }, [productList.data, discountList.data]);
+
+  //render box filter
+  const renderCategoryItems = useMemo(() => {
+    return categoryList.data.map((item, index) => {
+      return (
+        <Checkbox key={item.id} value={item.id}>
+          {item.name}
+        </Checkbox>
+      );
+    });
+  }, [categoryList.data]);
+
+  const renderDiscountItems = useMemo(() => {
+    return discountList.data.map((item, index) => {
+      return (
+        <Checkbox key={item.id} value={item.id}>
+          {item.name}
+        </Checkbox>
+      );
+    });
+  }, [discountList.data]);
+
+  const renderTypeItems = useMemo(() => {
+    return typeList.data.map((item, index) => {
+      return (
+        <Checkbox key={item.id} value={item.id}>
+          {item.name}
+        </Checkbox>
+      );
+    });
+  }, [typeList.data]);
 
   return (
     <S.ProductListWrapper>

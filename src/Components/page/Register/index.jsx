@@ -1,21 +1,21 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
-import { Link } from "react-router-dom"
-import { Form, Input, Button } from "antd"
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Form, Input, Button } from "antd";
 
-import { ROUTES } from "../../../constants/routes"
-import { registerRequest } from "../../../redux/slicers/auth.slice"
+import { ROUTES } from "../../../constants/routes";
+import { registerRequest } from "../../../redux/slicers/auth.slice";
 
-import * as S from "./style"
+import * as S from "./style";
 
 const RegisterPage = () => {
-  const [registerForm] = Form.useForm()
+  const [registerForm] = Form.useForm();
 
-  const { registerData } = useSelector((state) => state.auth)
+  const { registerData } = useSelector((state) => state.auth);
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (registerData.error) {
@@ -24,9 +24,9 @@ const RegisterPage = () => {
           name: "email",
           errors: [registerData.error],
         },
-      ])
+      ]);
     }
-  }, [registerData.error])
+  }, [registerData.error]);
 
   const handleSubmit = (values) => {
     dispatch(
@@ -42,8 +42,8 @@ const RegisterPage = () => {
         },
         callback: () => navigate(ROUTES.LOGIN),
       })
-    )
-  }
+    );
+  };
 
   return (
     <S.RegisterPageWrapper>
@@ -119,9 +119,9 @@ const RegisterPage = () => {
               (params) => ({
                 validator(_, value) {
                   if (!value || params.getFieldValue("password") === value) {
-                    return Promise.resolve()
+                    return Promise.resolve();
                   }
-                  return Promise.reject(new Error("Mật khẩu xác nhận không khớp"))
+                  return Promise.reject(new Error("Mật khẩu xác nhận không khớp"));
                 },
               }),
             ]}
@@ -137,7 +137,7 @@ const RegisterPage = () => {
         </Form>
       </S.RegisterPageContainer>
     </S.RegisterPageWrapper>
-  )
-}
+  );
+};
 
-export default RegisterPage
+export default RegisterPage;

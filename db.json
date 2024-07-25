@@ -568,62 +568,9 @@
       "name": "Set Bộ"
     }
   ],
-  "orders": [
-    {
-      "fullName": "chinh",
-      "email": "phanchinh17102002@gmail.com",
-      "phoneNumber": "0774564673",
-      "cityCode": "01",
-      "districtCode": "001",
-      "wardCode": "00007",
-      "address": "123adbc",
-      "paymentMethod": "cod",
-      "userId": 2,
-      "status": "pending",
-      "totalPrice": 237000,
-      "cityName": "Thành phố Hà Nội",
-      "districtName": "Quận Ba Đình",
-      "wardName": "Phường Cống Vị",
-      "createdAt": 1714136573178,
-      "updatedAt": 1714136573178,
-      "isDelete": false,
-      "id": 1
-    }
-  ],
-  "orderDetails": [
-    {
-      "orderId": 1,
-      "productName": "ÁO POLO MÀU ĐEN",
-      "price": 237000,
-      "quantity": 1,
-      "createdAt": 1714136573224,
-      "updatedAt": 1714136573224,
-      "isDelete": false,
-      "id": 1
-    }
-  ],
-  "reviews": [
-    {
-      "rate": 4,
-      "comment": "oke",
-      "userId": 2,
-      "productId": 1,
-      "createdAt": 1714136513984,
-      "updatedAt": 1714136513984,
-      "isDelete": false,
-      "id": 1
-    },
-    {
-      "rate": 5,
-      "comment": "ok",
-      "userId": 2,
-      "productId": 2,
-      "createdAt": 1714137292291,
-      "updatedAt": 1714137292291,
-      "isDelete": false,
-      "id": 2
-    }
-  ],
+  "orders": [],
+  "orderDetails": [],
+  "reviews": [],
   "favorites": [],
   "images": [],
   "cities": [

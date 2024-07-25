@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Form, Input, Button } from "antd";
 import { Link, useNavigate } from "react-router-dom";
+import { useGoogleLogin } from "@react-oauth/google";
 
 import { ROUTES } from "../../../constants/routes";
-import { loginRequest } from "../../../redux/slicers/auth.slice";
+import { loginRequest, googleLoginRequest } from "../../../redux/slicers/auth.slice";
 
 import * as S from "./style";
+import axios from "axios";
 
 const LoginPage = () => {
   const [loginForm] = Form.useForm();
@@ -40,6 +42,28 @@ const LoginPage = () => {
     );
   };
 
+  const handleGoogleLogin = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+          headers: {
+            Authorization: `Bearer ${response.access_token}`,
+          },
+        });
+        const userData = res.data;
+        dispatch(
+          googleLoginRequest({
+            data: userData,
+            callback: (role) =>
+              navigate(role === "admin" ? ROUTES.ADMIN.DASHBOARD : ROUTES.USER.HOME),
+          })
+        );
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  });
+
   return (
     <S.LoginContainer>
       <S.LoginForm>
@@ -66,6 +90,15 @@ const LoginPage = () => {
           </Form.Item>
           <div style={{ marginBottom: 16 }}>
             Bạn chưa có tài khoản? <Link to={ROUTES.REGISTER}>Đăng ký</Link>
+          </div>
+          <div>
+            <Button
+              type="primary"
+              style={{ marginBottom: 16, width: 360 }}
+              onClick={handleGoogleLogin}
+            >
+              Sign in with Google{" "}
+            </Button>
           </div>
           <Button type="primary" htmlType="submit" block>
             Đăng nhập
